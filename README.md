@@ -35,3 +35,13 @@ pip install -r requirements.txt #Install
     "python.pythonPath": "venv/bin/python"
 }
 ```
+
+## Robot Running tests 
+
+```bash
+robot keyword_driven.robot
+```
+
+```bash
+robot --name Robot --loglevel DEBUG keyword_driven.robot data_driven.robot gherkin.robot
+```
