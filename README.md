@@ -53,6 +53,10 @@ robot --name Robot --loglevel DEBUG keyword_driven.robot data_driven.robot gherk
 robot --timestampoutputs --outputdir report --log mylog.html --reportNONE keyword_driven.robot
 ```
 
+```bash
+robot --timestampoutputs --outputdir report --log mylog.html --report report keyword_driven.robot
+```
+
 ## Report
 
 ![alt text](pic/screenshot1.png "Screen Shot - Page 1")
