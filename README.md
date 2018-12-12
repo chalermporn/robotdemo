@@ -1,5 +1,6 @@
 
 # Robot Framework Demo
+
 ![alt text](pic/screenshot0.png "Screen Shot - VS CODE")
 
 ## Terminal
@@ -9,7 +10,6 @@
 ```bash
 python3 -m venv venv
 ```
-
 
 `2. Generate output suitable for a requirements file.`
 
@@ -24,7 +24,7 @@ pip freeze > requirements.txt #Generate file
 ```
 
 ```bash
-pip install -r requirements.txt #Install 
+pip install -r requirements.txt #Install
 ```
 
 ## VS Code
@@ -37,7 +37,7 @@ pip install -r requirements.txt #Install
 }
 ```
 
-## Robot Running tests 
+## Robot Running tests
 
 ```bash
 robot keyword_driven.robot
