@@ -1,7 +1,9 @@
 .pydevproject
 .project
 *.pyc
+venv
 .DS_Store
 log.html
 output.xml
 report.html
+.vscode

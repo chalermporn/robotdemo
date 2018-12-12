@@ -1,4 +1,4 @@
-====================
+
 Robot Framework Demo
 ====================
 
@@ -23,7 +23,7 @@ Example `test cases`_, `test library`_ used by them, and `generated results`_
 are available also online. Therefore, you do not need to download the demo if
 you are not interested in `running it`__ yourself.
 
-__ `running demo`_
+`running demo`
 
 Demo application
 ================
@@ -39,7 +39,7 @@ The demo contains three different test case files illustrating three different
 approaches for creating test cases with Robot Framework. Click file names below
 to see the latest versions online.
 
-`keyword_driven.robot`_
+`keyword_driven.robot`
     Example test cases using the *keyword-driven* testing approach.
 
     All tests contain a workflow constructed from keywords in
@@ -88,7 +88,7 @@ Generated library documentation makes it easy to see what keywords the
 library provides. This documentation is created with Libdoc_ tool integrated
 with the framework:
 
-- `CalculatorLibrary.html`_
+- `CalculatorLibrary.html`
 
 As you can see, Robot Framework's test library API is very simple.
 See `Robot Framework User Guide`_ for more information about creating test
@@ -102,8 +102,8 @@ files are also visible online in case you are not interested in running
 the demo yourself. Notice that one of the test has failed on purpose to
 show how failures look like.
 
-- `report.html`_
-- `log.html`_
+- `report.html`
+- `log.html`
 
 Running demo
 ============
@@ -118,7 +118,9 @@ cover installation procedure in detail. People already familiar with
 installing Python packages and having `pip`_ package manager installed, can
 simply run the following command::
 
+```bash
     pip install robotframework
+```
 
 Robot Framework 3.0 and newer support Python 3 in addition to Python 2. Also
 this demo project is nowadays Python 3 compatible.
@@ -128,7 +130,9 @@ Running tests
 
 Test cases are executed with the ``robot`` command::
 
+```bash
     robot keyword_driven.robot
+```
 
 .. note:: If you are using Robot Framework 2.9 or earlier, you need to
           use Python interpreter specific command ``pybot``, ``jybot`` or
@@ -139,30 +143,66 @@ directory as an argument. You can also give multiple files or directories in
 one go and use various command line options supported by Robot Framework.
 The results `available online`__ were created using the following command::
 
+```bash
     robot --name Robot --loglevel DEBUG keyword_driven.robot data_driven.robot gherkin.robot
+```
 
 Run ``robot --help`` for more information about the command line usage and see
 `Robot Framework User Guide`_ for more details about test execution in general.
 
-__ `Generated results`_
+# Generated results
+
+- Robot Framework: http://robotframework.org
+- Python: http://python.org
+- Jython: http://jython.org
+- IronPython: http://ironpython.net
+- pip: http://pip-installer.org
+- installation instructions: https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
+- Robot Framework User Guide: http://robotframework.org/robotframework/#user-guide
+- download page: https://bitbucket.org/robotframework/robotdemo/downloads
+- source code: https://bitbucket.org/robotframework/robotdemo/src
+- calculator.py: https://bitbucket.org/robotframework/robotdemo/src/master/calculator.py
+- CalculatorLibrary.py: https://bitbucket.org/robotframework/robotdemo/src/master/CalculatorLibrary.py
+- keyword_driven.robot: https://bitbucket.org/robotframework/robotdemo/src/master/keyword_driven.robot
+- data_driven.robot: https://bitbucket.org/robotframework/robotdemo/src/master/data_driven.robot
+- gherkin.robot: https://bitbucket.org/robotframework/robotdemo/src/master/gherkin.robot
+- Cucumber: http://cukes.info
+- Libdoc: http://robotframework.org/robotframework/#built-in-tools
+- CalculatorLibrary.html: http://robotframework.bitbucket.org/RobotDemo/CalculatorLibrary.html
+- report.html: http://robotframework.bitbucket.org/RobotDemo/report.html
+- log.html: http://robotframework.bitbucket.org/RobotDemo/log.html
+
+# Terminal
+
+`1. Create Virtualenv for workspace`
+
+```bash
+python3 -m venv venv
+```
 
 
-.. _Robot Framework: http://robotframework.org
-.. _Python: http://python.org
-.. _Jython: http://jython.org
-.. _IronPython: http://ironpython.net
-.. _pip: http://pip-installer.org
-.. _installation instructions: https://github.com/robotframework/robotframework/blob/master/INSTALL.rst
-.. _Robot Framework User Guide: http://robotframework.org/robotframework/#user-guide
-.. _download page: https://bitbucket.org/robotframework/robotdemo/downloads
-.. _source code: https://bitbucket.org/robotframework/robotdemo/src
-.. _calculator.py: https://bitbucket.org/robotframework/robotdemo/src/master/calculator.py
-.. _CalculatorLibrary.py: https://bitbucket.org/robotframework/robotdemo/src/master/CalculatorLibrary.py
-.. _keyword_driven.robot: https://bitbucket.org/robotframework/robotdemo/src/master/keyword_driven.robot
-.. _data_driven.robot: https://bitbucket.org/robotframework/robotdemo/src/master/data_driven.robot
-.. _gherkin.robot: https://bitbucket.org/robotframework/robotdemo/src/master/gherkin.robot
-.. _Cucumber: http://cukes.info
-.. _Libdoc: http://robotframework.org/robotframework/#built-in-tools
-.. _CalculatorLibrary.html: http://robotframework.bitbucket.org/RobotDemo/CalculatorLibrary.html
-.. _report.html: http://robotframework.bitbucket.org/RobotDemo/report.html
-.. _log.html: http://robotframework.bitbucket.org/RobotDemo/log.html
+`2. Generate output suitable for a requirements file.`
+
+```bash
+pip freeze
+```
+
+`3. Generate a requirements file and then install from it in another environment.`
+
+```bash
+pip freeze > requirements.txt #Generate file
+```
+
+```bash
+pip install -r requirements.txt #Install 
+```
+
+# VS Code
+
+`Add config setting.json`
+
+```json
+{
+    "python.pythonPath": "venv/bin/python"
+}
+```
