@@ -1,5 +1,6 @@
 
 # Robot Framework Demo
+![alt text](pic/screenshot0.png "Screen Shot - VS CODE")
 
 ## Terminal
 
@@ -45,3 +46,9 @@ robot keyword_driven.robot
 ```bash
 robot --name Robot --loglevel DEBUG keyword_driven.robot data_driven.robot gherkin.robot
 ```
+
+## Report
+
+![alt text](pic/screenshot1.png "Screen Shot - Page 1")
+![alt text](pic/screenshot2.png "Screen Shot - Page 2")
+![alt text](pic/screenshot3.png "Screen Shot - Page 3")
