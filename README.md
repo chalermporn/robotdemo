@@ -47,6 +47,12 @@ robot keyword_driven.robot
 robot --name Robot --loglevel DEBUG keyword_driven.robot data_driven.robot gherkin.robot
 ```
 
+`Timestamp Outputs to Report`
+
+```bash
+robot --timestampoutputs --outputdir report --log mylog.html --reportNONE keyword_driven.robot
+```
+
 ## Report
 
 ![alt text](pic/screenshot1.png "Screen Shot - Page 1")
